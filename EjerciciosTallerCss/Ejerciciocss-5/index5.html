@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 5 - Propiedad display</title>
+    <link rel="stylesheet" href="styles5.css">
+  </head>
+  <body>
+    <h1> Ejercicio Display</h1>
+    
+    <h2> Elementos div (block, inline-block, none)</h2>
+    <div class="caja-block">div con display: block</div>
+    <div class="caja-inline-block">div con display: inline-block</div>
+    <div class="span-inline">otro span inline</div>
+
+    <h2>Explicacion de las diferencias observadas</h2>
+    <p>
+        Los elementos con <code>display: block</code> ocupan todo el amcho disponible
+        y siempren comienzan en una nueva linea, por lo que se pueden colocar uno junto
+        al otro.
+    </p>
+
+    <p>
+        Los elementos con <code>display: inline</code> solo ocupan el espacio necesario
+    para su contenido, se ubican en la misma linea que otros elementos y no permiten definir
+    ancho ni alto.
+    </p>
+
+    <p>
+        Los elementos con <code>display: inline block</code> se comportan como los inline
+        (se ubican en la misma linea), pero sipermiten definir ancho, alto,margen, padding,
+        como si fueran block.
+    </p>
+
+    <p>
+        Los elementos con <code>display: none</code> desaparecen completamente de la pagina:
+        no ocupan espacio ni se muestran, a diferencia de la visibilidad oculta.
+    </p>
+
+  </body>
+</html>
