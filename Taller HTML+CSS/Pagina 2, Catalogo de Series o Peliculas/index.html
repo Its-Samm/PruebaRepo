@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Taller HTML - CSS - Catalogo de Series o Peliculas</title>
+
+     <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="animate__animated animate__backInLeft">
+        <ul>
+            <li><strong>  Movie TV</strong></li>
+        </ul>
+
+        <ul class="search">
+            <li>
+                <form role="search">
+                <input type="text" placeholder="Buscar título...">
+                <button type="submit">Buscar</button>
+                </form>
+            </li>
+
+        <ul>
+             <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#destacadas">Destacadas</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#calificaciones">Calificaciones</a></li>
+            <li><a href="#sugerir" role="button">Sugerir Película</a></li>
+        </ul>
+    </nav>
+
+    <header class="animate__animated animate__slideInDown">
+        <h1>Catálogo de Series y Películas</h1>
+        <p> Explora la mejor seccion de series destacadas del mes, revisa el catalogo
+            completo y sugiere tu proximo titulo para agregar.
+        </p>
+    </header>
+
+    <main class="animate__animated animate__slideInDown">
+
+        <section id="destacadas">
+            <div class="destacado-principal">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHJb45T_2D-MxVDW-OvXFGJKTeEdHXZhfzgn4KJH3TXA&s=10" alt="Poster de la serie destacada de la semana">
+
+            <div class="destacado-info">
+                <span class="destacado-titulo">Serie Destacada de la Semana</span>
+                <h2>El ultimo Faro</h2>
+                <p>Misterio  - 2 Temporadas</p>
+                <p> Un guardian en un faro empieza a resivir transmisines de un barco que desaparecio hace 30 años.</p>
+                <small>87% de audiencia</small>
+                <button>Ver Ahora</button>
+            </div>
+            </div>
+
+                <h3>Titulos Destacados</h3>
+                <div class="contenedor">
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS8-nwDk-N949CNlaDVfstKWEVV-t9RLB08_lDwTwImA&s=10" alt="Poster de la serie destacada 1">
+
+                        <h3>Frontera Roja</h3>
+                        <p>Estado: Recientemente Estrenada</p>
+                        <p>Un drama de acción y suspenso en la frontera entre dos países.</p>
+                        <small>92% de audiencia</small>
+                        <button>Ver detalles</button>
+                        <button>Ver Ahora</button>
+                    </article>
+
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKKiuT5XnlixHTU1K67jtlcQuSoa9M4Sxng43zOPr5Kg&s=10" alt="Poster de la serie destacada 1">
+
+                        <h3>Negocio Letal</h3>
+                        <p>Estado: En Emisión</p>
+                        <p>Un drama de acción y comedia sobre una sobrina que se ve forzada a trabajar en el negocio ilegal de su tío.</p>
+                        <small>75% de audiencia</small>
+                        <button>Ver detalles</button>
+                        <button>Ver Ahora</button>
+                    </article>
+
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQWVXafHg5-5aeH9iDcH1D_QqiKoeExjGDCegt1e3H_A&s=10" alt="Poster de la serie destacada 1">
+
+                        <h3>Belleza Perfecta</h3>
+                        <p>Estado: Recientemente Agregada</p>
+                        <small>92% de audiencia</small>
+                        <p>Triller de comedia y accion sobre una vacuna que transforma a su portador en una persona deslumbrante.</p>
+                        <small>accion, comedia, violencia.</small>
+                        <button>Ver detalles</button>
+                        <button>Ver Ahora</button>
+                    </article>
+                </div>
+        </section>
+
+        <section id="catalogo">
+            <h2>Catalogo Completo</h2>
+            <div class="contenedor">
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLo7LNDeIWWvBk4yDfyIECmUC62lT7AiNjuZ_5xbK9CQ&s=10" alt="Poster de la serie 1">
+
+                    <h3>Horizonte Estelar</h3>
+                    <p>Ciencia Ficción - 2023</p>
+                    <p>Una tripulación despierta de la hibernacion con una semana menos de la esperada.</p>
+                    <button>Ver detalles</button>
+                    <button>Ver Ahora</button>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPVOmAkZBnG4BZsRmVt5O0IdIXw1j12NHMKvhY6zn39A&s=10" alt="Poster de la serie 2">
+
+                    <h3>Distrito 9</h3>
+                    <p>Serie - Drama - 3 temporadas</p>
+                    <p>Un detective investiga una red de corrupccion dentro de su propio departamento de policia.</p>
+                    <button>Ver detalles</button>
+                    <button>Ver Ahora</button>
+                </article>
+
+                    <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsNCaVyAiyelEJISccNYO0QEzq0DG7Bk92hcL8rPCxeg&s=10" alt="Poster de la serie 3">
+
+                    <h3>La ultima noche</h3>
+                    <p>Terror - 2026</p>
+                    <p>Una joven descubre un secreto oscuro en su casa que la lleva a enfrentarse a una entidad sobrenatural.</p>
+                    <button>Ver detalles</button>
+                    <button>Ver Ahora</button>
+                    </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Novedades Recientes</h2>
+            <ul>
+                <li>Serie: "El Último Faro" - Nueva temporada disponible</li>
+                <li>Película: "Horizonte Estelar" - Estreno exclusivo en nuestra plataforma</li>
+                <li>Serie: "Negocio Familiar" - Episodio final de la temporada 2</li>
+                <li>Película: "Distrito 9" - Disponible para ver ahora</li>
+                <li>Serie: "Belleza Salvaje" - Nueva temporada agregada recientemente</li>
+            </ul>
+        </section>
+
+        <section id="calificaciones">
+            <h2>Calificaciones</h2>
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Año</th>
+                        <th>Calificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>El Último Faro</td>
+                        <td>Misterio</td>
+                        <td>2026</td>
+                        <td>87%</td>
+                    </tr>
+                    <tr>
+                        <td>Frontera Roja</td>
+                        <td>Acción/Suspenso</td>
+                        <td>2025</td>
+                        <td>92%</td>
+                    </tr>
+                    <tr>
+                        <td>Negocio Familiar</td>
+                        <td>Drama/Comedia</td>
+                        <td>2024</td>
+                        <td>75%</td>
+                    </tr>
+                    <tr>
+                        <td>Belleza Salvaje</td>
+                        <td>Thriller/Comedia/Acción</td>
+                        <td>2023</td>
+                        <td>92%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="sugerir">
+            <h2>Sugerir título</h2>
+            <form>
+                <input type="text" placeholder="Nombre del título" required>
+                    <select name="tipo" required>
+                        <option selected="Seleccione-genero">Seleccione un Género</option>
+                        <option>Terror</option>
+                        <option>Comedia</option>
+                        <option>Acción</option>
+                        <option>Drama</option>
+                        <option>Ciencia Ficción</option>
+                        <option>Thriller</option>
+                    </select>
+                    <textarea placeholder="Cuentanos porque deberia agregar este título" required></textarea>
+                    <button type="submit">Enviar Sugerencia</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer class="animate__animated animate__slideInUp">
+        <small>
+            © 2026 Movie TV· Catalogo de Series y Peliculas. Todos los derechos Resevados.  Samuel david Caicedo Rodriguez - 230242040.
+        </small>
+</body>
+</html>
