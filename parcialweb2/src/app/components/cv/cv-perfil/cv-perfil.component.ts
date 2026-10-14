@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
+  selector: 'app-cv-perfil',
   imports: [],
-  selector: 'app-cv-perfil.component',
-  styleUrl: './cv-perfil.component.scss',
   templateUrl: './cv-perfil.component.html',
+  styleUrl: './cv-perfil.component.scss'
 })
 export class CvPerfilComponent {}

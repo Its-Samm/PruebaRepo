@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { HojaDeVida } from './pages/hoja-de-vida/hoja-de-vida';
-import { Aprendizaje } from './pages/aprendizaje/aprendizaje';
-import { TemaLibre } from './pages/tema-libre/tema-libre';
+import { HojaDeVidaPage } from './pages/hoja-de-vida/hoja-de-vida.page';
+import { AprendizajePage } from './pages/aprendizaje/aprendizaje.page';
+import { TemaLibrePage } from './pages/tema-libre/tema-libre.page';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'hoja-de-vida', pathMatch: 'full' },
-  { path: 'hoja-de-vida', component: HojaDeVida },
-  { path: 'aprendizaje', component: Aprendizaje },
-  { path: 'tema-libre', component: TemaLibre },
+  { path: 'hoja-de-vida', component: HojaDeVidaPage },
+  { path: 'aprendizaje', component: AprendizajePage },
+  { path: 'tema-libre', component: TemaLibrePage },
 ];
