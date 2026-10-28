@@ -1,23 +1,17 @@
--- Tabla de estudiantes
-CREATE TABLE IF NOT EXISTS students_example (
+-- Categorias
+CREATE TABLE IF NOT EXISTS categorias (
     id SERIAL PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    correo VARCHAR(150) UNIQUE NOT NULL
+    nombre VARCHAR(100) NOT NULL UNIQUE
 );
 
--- Tabla de cursos
-CREATE TABLE IF NOT EXISTS courses_example (
+-- Productos
+CREATE TABLE IF NOT EXISTS productos (
     id SERIAL PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    creditos INTEGER NOT NULL CHECK (creditos > 0)
+    nombre VARCHAR(120) NOT NULL,
+    precio NUMERIC(10,2) NOT NULL CHECK (precio >= 0),
+    stock INTEGER NOT NULL DEFAULT 0 CHECK (stock >= 0),
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
+    fecha_ingreso DATE NOT NULL DEFAULT CURRENT_DATE,
+    categoria_id INTEGER NOT NULL REFERENCES categorias(id) ON DELETE CASCADE
 );
 
--- Tabla intermedia para la relación N:M
-CREATE TABLE IF NOT EXISTS enrollments_example (
-    id SERIAL PRIMARY KEY,
-    estudiante_id INTEGER NOT NULL REFERENCES students_example(id) ON DELETE CASCADE,
-    curso_id INTEGER NOT NULL REFERENCES courses_example(id) ON DELETE CASCADE,
-    fecha_matricula DATE NOT NULL DEFAULT CURRENT_DATE,
-    nota_final NUMERIC(3, 1) CHECK (nota_final BETWEEN 0 AND 5),
-    UNIQUE (estudiante_id, curso_id)
-);

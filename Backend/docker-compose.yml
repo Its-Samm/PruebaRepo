@@ -1,32 +1,40 @@
-version: '3'
-
 services:
   myDB:
     image: postgres:15.3
     container_name: users-products-app
     restart: always
     ports:
-      - 5433:5432
+      - "127.0.0.1:5433:5432"
     environment:
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=123456
-      - POSTGRES_DB=proyecto-integrador-db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: proyecto-integrador-db
     volumes:
       - ./postgres:/var/lib/postgresql/data
-  
+      - ./docker/config/pg_hba.conf:/etc/postgresql/pg_hba.conf:ro
+      - ./src/database/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    command: ["postgres", "-c", "hba_file=/etc/postgresql/pg_hba.conf"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d proyecto-integrador-db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
   pdAdmin:
     image: dpage/pgadmin4
     container_name: pgadmin-proyecto-integrador-db
     restart: always
     depends_on:
-      - myDB
+      myDB:
+        condition: service_healthy
     ports:
-      - 8081:80
+      - "8081:80"
     environment:
-      - PGADMIN_DEFAULT_EMAIL=user@google.com
-      - PGADMIN_DEFAULT_PASSWORD=123456
+      PGADMIN_DEFAULT_EMAIL: user@google.com
+      PGADMIN_DEFAULT_PASSWORD: "123456"
     volumes:
-      - ./pgadmin:/var/lib/pgadmin
-      - ./pgadmin:/certs/server.cert
-      - ./pgadmin:/certs/server.key
-      - ./pgadmin:/pgadmin4/servers.json
+      - pgadmin-data:/var/lib/pgadmin
+
+volumes:
+  pgadmin-data:

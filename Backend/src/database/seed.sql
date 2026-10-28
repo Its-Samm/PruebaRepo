@@ -1,22 +1,17 @@
--- Estudiantes
-INSERT INTO students_example (nombre, correo) 
-VALUES
-    ('Carlos Ramirez', 'carlos.example@example.com'),
-    ('Laura Gomez', 'laura.example@example.com'),
-    ('Andres Martinez', 'andres.example@example.com');
+    INSERT INTO categorias (nombre) VALUES
+    ('Camisetas'),
+    ('Shorts'),
+    ('Gorras'),
+    ('Buzos'),
+    ('Pantalones'),
+    ('Camisas'),
+    ('Polos');
 
--- Cursos
-INSERT INTO courses_example (nombre, creditos) 
-VALUES
-    ('Bases de Datos', 3),
-    ('Programacion Web', 4),
-    ('Arquitectura de Software', 3);
-
--- Matrículas
-INSERT INTO enrollments_example (estudiante_id, curso_id, fecha_matricula, nota_final)
-VALUES
-    (1, 1, CURRENT_DATE, 4.5),
-    (1, 2, CURRENT_DATE, 4.2),
-    (2, 1, CURRENT_DATE, 3.8),
-    (2, 3, CURRENT_DATE, 4.6),
-    (3, 2, CURRENT_DATE, 4.0);
+    INSERT INTO productos (nombre, precio, stock, categoria_id) VALUES
+    ('Camiseta oversize negra', 89900, 30, 1),
+    ('Short deportivo', 65000, 20, 2),
+    ('Gorra basica flexfit', 76900, 48, 3),
+    ('Pantalon cargo', 129000, 25, 5),
+    ('Polo clasico blanco', 99000, 30, 7),
+    ('Buzo azul rey', 159000, 30, 4),
+    ('camisa manga larga blanca', 69990, 01, 6);
