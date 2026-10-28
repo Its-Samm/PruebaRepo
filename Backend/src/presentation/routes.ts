@@ -1,5 +1,8 @@
 import { Router } from "express";
 import { ExampleRoutes } from "./modules/example/example.routes";
+import { CatalogRoutes } from "./modules/catalog/catalog.routes";
+import { ProductoRoutes } from "./modules/producto/producto.routes";
+import { CategoriaRoutes } from "./modules/categoria/categoria.routes";
 
 export class AppRoutes {
 
@@ -9,6 +12,9 @@ export class AppRoutes {
 
     // Definir rutas
     apiRouter.use("/example", ExampleRoutes.routes);
+    apiRouter.use("/catalog", CatalogRoutes.routes);
+    apiRouter.use("/productos", ProductoRoutes.routes);
+    apiRouter.use("/categorias", CategoriaRoutes.routes);
 
     router.use("/api", apiRouter);
 
