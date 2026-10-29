@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Taller HTML - CSS - Agencia viajes</title>
+
+     <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="animate__animated animate__backInLeft">
+        <ul>
+            <li><strong>  ViajaYa</strong></li>
+        </ul>
+
+        <ul>
+            <li><a href="#index">Inicio</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#reserva" role="button">Reserva Ya</a></li>
+        </ul>
+    </nav>
+
+    <header class="animate__animated animate__slideInDown">
+        <h1>Bienvenido a ViajaYa</h1>
+        <p> Descubre los mejores destinos turísticos hoy, aquí.</p>
+    </header>
+
+    <main class="animate__animated animate__slideInDown">
+
+        <section id="destinos">
+            <h2>Destinos Populares</h2>
+            <div class="contenedor">
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHUSqTEBzgulIzDPnErMLU8vrhLZbJg1ywNCVJj5dVCw&s=10" alt="Destino 1">
+                    <h3>San Andres Islas</h3>
+                    <p>Precio: $1.249.990</p>
+                    <p>Disfruta de las mejores playas con arena blanca y aguas cristalinas.</p>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHjZlMpH4GaHDvjr9m9xqShzIscF2R8ht8i-Pp5Lp6v9WG8L-pc0rjZHw&s=10" alt="Destino 2">
+                    <h3>Cartagena de indias</h3>
+                    <p>Precio: $859.990</p>
+                    <p>Descubre el encanto colonial del castillo de San Felipe.</p>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQg3KEzLfTo8cWocQ4_Ci3of16dlEUbuU9W-BQz_j5sOmG580gpLELzL8I&s=10" alt="Destino 3">
+                    <h3>Curazao</h3>
+                    <p>Precio: $1.000.000</p>
+                    <p>Sumergete en la cultura y naturaleza unicas de este paraiso caribeño</p>
+                </article>
+        </section>
+
+        <section id="opiniones">
+            <h2>Opiniones</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Destino</th>
+                        <th>Calificación</th>
+                        <th>Comentario</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Juan Péres</td>
+                        <td>San Andres Islas</td>
+                        <td>4.9</td>
+                        <td>Exelente servicio, Muy Bonitas playas.</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Garcia</td>
+                        <td>Cartagena de Indias</td>
+                        <td>4.2</td>
+                        <td>Muy Hermosa la ciudad, Recomiendo el Rodadero Muy Bonito.</td>
+                    </tr>
+                    <tr>
+                        <td>Maribel Trujillo</td>
+                        <td>Curazao</td>
+                        <td>3.0</td>
+                        <td>Lindo Todo, El servicio puede mejorar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="reserva">
+            <h2>Reserva tu Viaje</h2>
+            <form>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                 <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+
+                 <label for="id">Documento Identidad:</label>
+                <select id="id" name="id" required>
+                    <option value="">Seleccione un documento</option>
+                    <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+                    <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+                    <option value="Targeta de Identidad">Targeta de Identidad</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    </select>
+
+                 <label for="num_doc">Numero Documento:</label>
+                <input type="text" id="num_doc" name="num_doc" required>
+
+                <label for="destino">Destino:</label>
+                <select id="destino" name="destino" required>
+                    <option value="">Seleccione un destino</option>
+                    <option value="san_andres">San Andres Islas</option>
+                    <option value="cartagena">Cartagena de Indias</option>
+                    <option value="curazao">Curazao</option>
+                </select>
+
+                <label for="num_personas">Numero de Personas:</label>
+                <input type="number" id="num_personas" name="num_personas" min="1" required>
+
+                <label for="fecha">Fecha de viaje:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="fecha_regr">Fecha de Regreso:</label>
+                <input type="date" id="fecha_regr" name="fecha_regr" required>
+
+                <button type="submit">Reservar</button>
+        </section>
+
+    </main>
+
+    <footer class="animate__animated animate__slideInUp">
+        <p>Contáctanos:</p>
+        <ul>
+            <li><a href="mailto:info@viajaya.com">info@viajaya.com</a></li>
+        </ul>
+
+        <small>
+            © 2026 ViajaYa · Agencia de viajes. Todos los derechos Resevados.  Samuel david Caicedo Rodriguez - 230242040.
+        </small>
+</body>
+</html>

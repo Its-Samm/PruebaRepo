@@ -1,0 +1,16 @@
+<h2 class="mb-4">Mis videojuegos favoritos</h2>
+<div class="row g-3">
+  @for (juego of juegos; track juego.nombre) {
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ juego.nombre }}</h5>
+          <h6 class="text-muted">{{ juego.genero }} · {{ juego.anio }}</h6>
+          <p class="card-text">{{ juego.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  } @empty {
+    <p>No hay juegos para mostrar.</p>
+  }
+</div>

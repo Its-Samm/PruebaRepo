@@ -1,0 +1,32 @@
+<h2 class="mb-4">Aprendizaje del curso</h2>
+
+<div class="btn-group mb-3">
+  @for (f of filtros; track f.valor) {
+    <button type="button" class="btn btn-outline-primary"
+            [class.active]="filtro === f.valor"
+            (click)="cambiarFiltro(f.valor)">
+      {{ f.texto }}
+    </button>
+  }
+</div>
+
+<p class="text-muted">Mostrando {{ itemsFiltrados.length }} de {{ items.length }}</p>
+
+<div class="row g-4">
+  @for (item of itemsFiltrados; track item.titulo) {
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <span class="badge mb-2" [class]="'badge mb-2 ' + colores[item.tipo]">{{ item.tipo }}</span>
+          <h5 class="card-title">{{ item.titulo }}</h5>
+          <p class="card-text text-muted">{{ item.descripcion }}</p>
+          @for (t of item.tecnologias; track t) {
+            <span class="badge bg-light text-dark border me-1">{{ t }}</span>
+          }
+        </div>
+      </div>
+    </div>
+  } @empty {
+    <p>No hay elementos para mostrar.</p>
+  }
+</div>

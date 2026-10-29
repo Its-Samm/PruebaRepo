@@ -1,0 +1,58 @@
+/*Fondo pagina*/
+body {
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Estilos de la cajas*/
+.caja { 
+width: 200px;
+height: 120px;
+margin: 20px auto;
+align-items: center;
+justify-content: center;
+border-radius: 8px;
+}
+
+.caja1 {
+  background-color: #e74c3e;
+  color: #ffffff;
+  width: 250px;
+  height: 180px;
+  margin: 20px auto;
+}
+
+.caja2 {
+  background-color: #f1c40f;
+  color: #2c3e50;
+   width: 450px;
+  height: 350px;
+  margin: 20px auto;
+}
+
+.caja3 {
+  background-color: #3498db;
+  color: #ffffff;
+   width: 350px;
+  height: 250px;
+  margin: 20px auto;
+}
+
+p1 {
+font-family: Arial, sans-serif; 
+color: #9a2828;
+font-size: 16px;
+}
+
+p2 {
+font-family: Arial, sans-serif; 
+color: #8915a0;
+font-size: 16px;
+}
+
+p3 {
+font-family: Arial, sans-serif; 
+color: #dde0de;
+font-size: 16px;
+}

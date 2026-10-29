@@ -1,0 +1,32 @@
+.noticia {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.subtitulo {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    font-style: italic;
+    color: #555555;
+}
+
+.parrafo {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+    text-align: justify;
+    font-style: 1.6;
+    color: #333333;
+}

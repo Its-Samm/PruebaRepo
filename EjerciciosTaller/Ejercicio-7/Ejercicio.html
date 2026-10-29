@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 7 - Formularios Avanzados </title>
+</head>
+<body>
+
+    <h1>Formulario de Inscripcion Universitaria</h1>
+    <h2>Ingresa la información solicitada en el formulario para completar tu inscripción.</h2>
+
+    <form action="procesar.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <edadlabel for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="1" max="120" required><br><br>
+
+        <fechanacimientolabel for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>  
+
+        <seleccionaclabel for="carrera">Programa:</seleccionaclabel><br>
+        <select id="carrera" name="carrera" required>
+            <option value="">Seleccione una carrera</option>
+            <option value="ingenieria_sistemas">Ingeniería de Sistemas</option>
+            <option value="ingenieria_electronica">Ingeniería Electrónica</option>
+            <option value="ingenieria_mecanica">Ingeniería Mecánica</option>
+            <option value="ingenieria_civil">Ingeniería Civil</option>
+        </select><br><br>
+
+        <generoutilizacionlabel for="genero">Género:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="otro" name="genero" value="otro" required>
+        <label for="otro">Otro</label><br><br>
+
+        <habilidadesutilizandolabel for="habilidades">Habilidades:</label><br>
+        <input type="checkbox" id="programacion" name="habilidades[]" value="programacion">
+        <label for="programacion">Programación</label><br>
+        <input type="checkbox" id="bases_datos" name="habilidades[]" value="bases_datos">
+        <label for="bases_datos">Bases de Datos</label><br>
+        <input type="checkbox" id="desarrollo_web" name="habilidades[]" value="desarrollo_web">
+        <label for="desarrollo_web">Desarrollo Web</label><br>
+        <input type="checkbox" id="inteligencia_artificial" name="habilidades[]" value="inteligencia_artificial">
+        <label for="inteligencia_artificial">Inteligencia Artificial</label><br><br>
+
+        <fotoutilizandolabel for="foto">Subir foto de perfil:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
+
+
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+</body>
+</html>

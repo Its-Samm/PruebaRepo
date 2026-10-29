@@ -1,0 +1,23 @@
+p {
+font-family: Arial, sans-serif; 
+color: #9a2828;
+font-size: 16px;
+}
+
+.destacado {
+  color: #2e86de;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#parrafo-especial {
+  color: #c4e425;
+  font-size: 18px;
+  font-style: italic;
+}
+
+h1 {
+  color: #27ae60;
+  font-size: 30px;
+text-align: center;
+}
