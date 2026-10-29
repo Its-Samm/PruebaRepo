@@ -6,6 +6,7 @@ import { pool } from "../config/database";
 import { swaggerSpec } from '../config/swagger';
 import { Options } from "../domain/interfaces/server.interface";
 
+
 /**
  * Clase que representa el servidor Express de la aplicación.
  *
