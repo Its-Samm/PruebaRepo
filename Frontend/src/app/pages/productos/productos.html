@@ -1,0 +1,45 @@
+<app-navbar />
+
+<main class="container py-4">
+  <header class="movies-page__header">
+    <div>
+      <span class="movies-page__eyebrow">Inventario</span>
+      <h1>Productos</h1>
+      <p class="text-secondary mb-0">Consulta los productos registrados en la tienda.</p>
+    </div>
+    <a routerLink="/categorias" class="btn btn-outline-primary">
+      <i class="bi bi-tags me-2"></i>Ver categorías
+    </a>
+  </header>
+
+  @if (loading) {
+    <div class="alert alert-info" role="status">Cargando productos...</div>
+  } @else if (errorMessage) {
+    <div class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+  } @else {
+    <div class="row g-4">
+      @for (producto of productos; track producto.id) {
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="movie-card h-100">
+            <div class="movie-card__poster">
+              <i class="bi bi-bag"></i>
+              <span>{{ producto.categoriaNombre }}</span>
+            </div>
+            <div class="movie-card__body">
+              <div class="d-flex justify-content-between gap-3">
+                <h2>{{ producto.nombre }}</h2>
+                <span class="movie-card__year">{{ producto.precio | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
+              </div>
+              <p class="mb-2">Stock disponible: {{ producto.stock }} unidades</p>
+              <small class="text-secondary">
+                <i class="bi bi-calendar3 me-1"></i>Ingreso: {{ producto.fechaIngreso | date:'dd/MM/yyyy' }}
+              </small>
+            </div>
+          </article>
+        </div>
+      } @empty {
+        <div class="col-12"><p class="text-center text-secondary">No hay productos registrados.</p></div>
+      }
+    </div>
+  }
+</main>
